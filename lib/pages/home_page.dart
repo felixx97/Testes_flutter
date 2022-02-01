@@ -19,6 +19,41 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text("AppBar dois"),
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            const UserAccountsDrawerHeader(
+              accountName: Text("Félix"),
+              accountEmail: Text("abrahammfelixx"),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.amberAccent,
+                child: Text('D'),
+              ),
+            ),
+            ListTile(
+              title: Text("item 1"),
+              trailing: Icon(Icons.account_tree),
+              onTap: () {
+                _pageController.jumpToPage(0);
+              },
+            ),
+            ListTile(
+              title: Text("item 2"),
+              trailing: Icon(Icons.account_tree),
+              onTap: () {
+                _pageController.jumpToPage(1);
+              },
+            ),
+            ListTile(
+              title: Text("item 3"),
+              trailing: Icon(Icons.account_tree),
+              onTap: () {
+                _pageController.jumpToPage(2);
+              },
+            ),
+          ],
+        ),
+      ),
       body: PageView(
         controller: _pageController,
         children: [
