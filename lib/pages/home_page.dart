@@ -35,6 +35,10 @@ class _HomePageState extends State<HomePage> {
               trailing: Icon(Icons.account_tree),
               onTap: () {
                 _pageController.jumpToPage(0);
+                Navigator.pop(context);
+                setState(() {
+                  indexBottomNavigation = 0; //animando o bottom navegation
+                });
               },
             ),
             ListTile(
@@ -42,6 +46,10 @@ class _HomePageState extends State<HomePage> {
               trailing: Icon(Icons.account_tree),
               onTap: () {
                 _pageController.jumpToPage(1);
+                Navigator.pop(context);
+                setState(() {
+                  indexBottomNavigation = 1; //animando o bottom navegation
+                });
               },
             ),
             ListTile(
@@ -49,6 +57,10 @@ class _HomePageState extends State<HomePage> {
               trailing: Icon(Icons.account_tree),
               onTap: () {
                 _pageController.jumpToPage(2);
+                Navigator.pop(context);
+                setState(() {
+                  indexBottomNavigation = 2; //animando o bottom navegation
+                });
               },
             ),
           ],
